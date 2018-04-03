@@ -15,7 +15,7 @@ public class Index extends AppCompatActivity {
     TextView maxSpeed;
 
     DatabaseReference mRootRef = FirebaseDatabase.getInstance().getReference();
-    DatabaseReference mConditionRef = mRootRef.child("Velocidad");
+    DatabaseReference mConditionRef = mRootRef.child("velocidad");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
