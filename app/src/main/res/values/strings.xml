@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">BMW</string>
+    <string name="velocidad">Velocidad</string>
+    <string name="aceleracion">Aceleración</string>
+    <string name="energia_consumida">Energia Consumida</string>
+    <string name="distancia">Distancia</string>
+    <string name="tiempo">Tiempo</string>
+    <string name="foto">Foto</string>
+</resources>
