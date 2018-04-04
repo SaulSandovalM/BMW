@@ -12,17 +12,17 @@ import com.google.firebase.database.ValueEventListener;
 
 public class Index extends AppCompatActivity {
 
-   /* TextView maxSpeed;
+    TextView textView5;
 
     DatabaseReference mRootRef = FirebaseDatabase.getInstance().getReference();
-    DatabaseReference mConditionRef = mRootRef.child("velocidad");*/
+    DatabaseReference mConditionRef = mRootRef.child("Nombre");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_index);
 
-       /* maxSpeed = findViewById(R.id.maxSpeed);
+        textView5 = findViewById(R.id.textView5);
     }
 
     @Override
@@ -33,13 +33,13 @@ public class Index extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 String text = dataSnapshot.getValue(String.class);
-                maxSpeed.setText(text);
+                textView5.setText(text);
             }
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
 
             }
-        });*/
+        });
     }
 }
