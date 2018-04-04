@@ -9,62 +9,51 @@
     tools:context=".Index">
 
     <com.github.anastr.speedviewlib.AwesomeSpeedometer
+        android:id="@+id/awesomeSpeedometer2"
+        android:layout_width="123dp"
+        android:layout_height="130dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        app:sv_speedTextSize="35dp"
+        app:sv_speedometerColor="#ef3737"
+        app:sv_textSize="0dp"
+        app:sv_speedTextFormat="INTEGER"
+        app:sv_unit=""
+        app:sv_indicator="NoIndicator"/>
+
+    <com.github.anastr.speedviewlib.AwesomeSpeedometer
         android:id="@+id/awesomeSpeedometer3"
+        android:layout_width="123dp"
+        android:layout_height="130dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        app:sv_speedTextSize="35dp"
+        app:sv_speedometerColor="#ef3737"
+        app:sv_textSize="0dp"
+        app:sv_speedTextFormat="INTEGER"
+        app:sv_unit=""
+        app:sv_indicator="NoIndicator"/>
+
+    <com.github.anastr.speedviewlib.AwesomeSpeedometer
+        android:id="@+id/awesomeSpeedometer"
         android:layout_width="wrap_content"
         android:layout_height="268dp"
         android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="60dp"
         app:sv_speedTextSize="50dp"
         app:sv_textSize="20dp"
-        android:layout_alignParentTop="true" />
+        app:sv_unit="cm/s"/>
 
     <com.github.anastr.speedviewlib.AwesomeSpeedometer
         android:id="@+id/awesomeSpeedometer4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        app:sv_speedTextSize="50dp"
-        app:sv_textSize="20dp"
-        android:layout_alignParentTop="true" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_below="@+id/awesomeSpeedometer4"
-        android:fontFamily="serif"
-        android:text="Distancia"
-        android:textColor="@color/white"
-        android:textSize="20dp" />
-
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/awesomeSpeedometer4"
-        android:fontFamily="serif"
-        android:text="Bateria"
-        android:textColor="@color/white"
-        android:textSize="20dp" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:fontFamily="serif"
-        android:text="Talent Land"
-        android:textColor="@color/white"
-        android:textSize="20dp" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="100dp"
-        android:layout_height="200dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        app:srcCompat="@mipmap/ic_launcher" />
+        android:layout_marginEnd="60dp"
+        app:sv_speedTextSize="55dp"
+        app:sv_textSize="20dp"
+        app:sv_unit="cm/s" />
 
 </RelativeLayout>
