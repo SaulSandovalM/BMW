@@ -56,4 +56,11 @@
         app:sv_textSize="20dp"
         app:sv_unit="cm/s" />
 
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:textSize="40dp"
+        android:text="0.0"/>
+
 </RelativeLayout>
