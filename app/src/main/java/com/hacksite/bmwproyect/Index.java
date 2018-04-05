@@ -42,8 +42,8 @@ public class Index extends AppCompatActivity {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 Prediccion pred = dataSnapshot.getValue(Prediccion.class);
                 assert pred != null;
-                velocidad.setText(pred.getVelocidad() + "cm/s");
-                aceleracion.setText(pred.getAceleracion() + "cm/s");
+                velocidad.setText(pred.getVelocidad() + "");
+                aceleracion.setText(pred.getAceleracion() + "");
                 bateria.setText(pred.getBateria() + "%");
                 distancia.setText(pred.getDistancia() + "cm");
             }

@@ -14,7 +14,7 @@
         android:layout_height="130dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        app:sv_speedTextSize="35dp"
+        app:sv_speedTextSize="0dp"
         app:sv_speedometerColor="#ef3737"
         app:sv_textSize="0dp"
         app:sv_speedTextFormat="INTEGER"
@@ -27,12 +27,12 @@
         android:layout_height="130dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        app:sv_speedTextSize="35dp"
+        app:sv_indicator="NoIndicator"
+        app:sv_speedTextFormat="INTEGER"
+        app:sv_speedTextSize="0dp"
         app:sv_speedometerColor="#ef3737"
         app:sv_textSize="0dp"
-        app:sv_speedTextFormat="INTEGER"
-        app:sv_unit=""
-        app:sv_indicator="NoIndicator"/>
+        app:sv_unit="" />
 
     <com.github.anastr.speedviewlib.AwesomeSpeedometer
         android:id="@+id/awesomeSpeedometer"
@@ -41,7 +41,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="60dp"
-        app:sv_speedTextSize="50dp"
+        app:sv_speedTextSize="0dp"
         app:sv_textSize="20dp"
         app:sv_unit="cm/s"/>
 
@@ -52,7 +52,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
         android:layout_marginEnd="60dp"
-        app:sv_speedTextSize="55dp"
+        app:sv_speedTextSize="0dp"
         app:sv_textSize="20dp"
         app:sv_unit="cm/s" />
 
@@ -60,34 +60,75 @@
         android:id="@+id/velocidad"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:textSize="40dp"
-        android:text="0.0"/>
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="66dp"
+        android:text="0.0"
+        android:textColor="@color/white"
+        android:textSize="55dp" />
 
     <TextView
         android:id="@+id/aceleracion"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true"
+        android:layout_alignTop="@+id/velocidad"
+        android:layout_toStartOf="@+id/awesomeSpeedometer2"
         android:text="0.0"
-        android:textSize="40dp" />
+        android:textColor="@color/white"
+        android:textSize="55dp" />
 
     <TextView
         android:id="@+id/distancia"
         android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_height="92dp"
         android:layout_alignParentBottom="true"
-        android:layout_toEndOf="@+id/awesomeSpeedometer3"
-        android:text="0.0"
-        android:textSize="40dp" />
+        android:layout_marginEnd="-148dp"
+        android:layout_toStartOf="@+id/velocidad"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="42dp" />
 
     <TextView
         android:id="@+id/bateria"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="74dp"
+        android:layout_height="92dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="42dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/awesomeSpeedometer3"
+        android:text="Distancia" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_toStartOf="@+id/awesomeSpeedometer2"
-        android:text="0.0"
-        android:textSize="40dp" />
+        android:text="Bateria" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/awesomeSpeedometer2"
+        android:text="Aceleracion" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/awesomeSpeedometer3"
+        android:layout_alignParentTop="true"
+        android:text="Velocidad" />
 
 </RelativeLayout>
