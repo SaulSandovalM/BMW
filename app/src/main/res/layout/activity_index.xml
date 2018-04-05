@@ -133,14 +133,14 @@
         android:text="" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/temperatura"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:textSize="20dp"
         android:textColor="@color/white"
-        android:text="32ºC" />
+        android:text="" />
 
     <TextView
         android:id="@+id/textView5"

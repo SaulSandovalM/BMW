@@ -16,6 +16,7 @@ public class Index extends AppCompatActivity {
     private TextView distancia;
     private TextView aceleracion;
     private TextView bateria;
+    private TextView temperatura;
 
     private DatabaseReference dbVelocidad;
     private DatabaseReference dbPrediccion;
@@ -34,6 +35,7 @@ public class Index extends AppCompatActivity {
         aceleracion = (TextView) findViewById(R.id.aceleracion);
         bateria = (TextView) findViewById(R.id.bateria);
         distancia = (TextView) findViewById(R.id.distancia);
+        temperatura = (TextView) findViewById(R.id.temperatura);
 
         dbPrediccion = FirebaseDatabase.getInstance().getReference().child("DatosAuto");
 
@@ -44,8 +46,10 @@ public class Index extends AppCompatActivity {
                 assert pred != null;
                 velocidad.setText(pred.getVelocidad() + "");
                 aceleracion.setText(pred.getAceleracion() + "");
+
                 bateria.setText(pred.getBateria() + "");
                 distancia.setText(pred.getDistancia() + "");
+                temperatura.setText(pred.getDistancia() + "ºC");
             }
 
             @Override
