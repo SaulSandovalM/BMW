@@ -44,8 +44,8 @@ public class Index extends AppCompatActivity {
                 assert pred != null;
                 velocidad.setText(pred.getVelocidad() + "");
                 aceleracion.setText(pred.getAceleracion() + "");
-                bateria.setText(pred.getBateria() + "%");
-                distancia.setText(pred.getDistancia() + "cm");
+                bateria.setText(pred.getBateria() + "");
+                distancia.setText(pred.getDistancia() + "");
             }
 
             @Override

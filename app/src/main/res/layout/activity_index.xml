@@ -62,9 +62,9 @@
         android:layout_height="100dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="148dp"
+        android:layout_marginStart="166dp"
         android:layout_marginTop="66dp"
-        android:text="0.0"
+        android:text="0"
         android:textColor="@color/white"
         android:textSize="55dp" />
 
@@ -72,9 +72,10 @@
         android:id="@+id/aceleracion"
         android:layout_width="100dp"
         android:layout_height="100dp"
+        android:layout_alignParentEnd="true"
         android:layout_alignTop="@+id/velocidad"
-        android:layout_toStartOf="@+id/awesomeSpeedometer2"
-        android:text="0.0"
+        android:layout_marginEnd="114dp"
+        android:text="0"
         android:textColor="@color/white"
         android:textSize="55dp" />
 
@@ -82,9 +83,8 @@
         android:id="@+id/distancia"
         android:layout_width="100dp"
         android:layout_height="92dp"
+        android:layout_alignEnd="@+id/awesomeSpeedometer3"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="-148dp"
-        android:layout_toStartOf="@+id/velocidad"
         android:text="0"
         android:textColor="@color/white"
         android:textSize="42dp" />
@@ -95,6 +95,7 @@
         android:layout_height="92dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
+        android:layout_marginEnd="11dp"
         android:text="0"
         android:textColor="@color/white"
         android:textSize="42dp" />
@@ -124,7 +125,25 @@
         android:text="Aceleracion" />
 
     <TextView
+        android:id="@+id/hora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView3"
+        android:layout_centerHorizontal="true"
+        android:text="" />
+
+    <TextView
         android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:text="32ºC" />
+
+    <TextView
+        android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignEnd="@+id/awesomeSpeedometer3"
