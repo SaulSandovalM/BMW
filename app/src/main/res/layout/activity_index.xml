@@ -57,10 +57,37 @@
         app:sv_unit="cm/s" />
 
     <TextView
-        android:id="@+id/text1"
+        android:id="@+id/velocidad"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:textSize="40dp"
         android:text="0.0"/>
+
+    <TextView
+        android:id="@+id/aceleracion"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:text="0.0"
+        android:textSize="40dp" />
+
+    <TextView
+        android:id="@+id/distancia"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/awesomeSpeedometer3"
+        android:text="0.0"
+        android:textSize="40dp" />
+
+    <TextView
+        android:id="@+id/bateria"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/awesomeSpeedometer2"
+        android:text="0.0"
+        android:textSize="40dp" />
 
 </RelativeLayout>

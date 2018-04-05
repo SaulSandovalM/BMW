@@ -12,35 +12,47 @@ import com.google.firebase.database.ValueEventListener;
 
 public class Index extends AppCompatActivity {
 
-    TextView mvelocidad, maceleracion, mdistancIA, mbateria;
+    private TextView velocidad;
+    private TextView distancia;
+    private TextView aceleracion;
+    private TextView bateria;
 
+    private DatabaseReference dbVelocidad;
+    private DatabaseReference dbPrediccion;
+    private ValueEventListener eventListener;
+/*
     DatabaseReference mRootRef = FirebaseDatabase.getInstance().getReference();
-    DatabaseReference mvelocidadRef = mRootRef.child("aceleracion/" +Id);
+    DatabaseReference mvelocidadRef = mRootRef.child("Nombre");
+    DatabaseReference dbVelocidad = FirebaseDatabase.getInstance().getReference().child("Velocidad/").child("velocidad")*/;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_index);
 
-        mvelocidad = (TextView)findViewById(R.id.text1);
+        velocidad = (TextView) findViewById(R.id.velocidad);
+        aceleracion = (TextView) findViewById(R.id.aceleracion);
+        bateria = (TextView) findViewById(R.id.bateria);
+        distancia = (TextView) findViewById(R.id.distancia);
 
-    }
+        dbPrediccion = FirebaseDatabase.getInstance().getReference().child("DatosAuto");
 
-    @Override
-    protected void onStart(){
-        super.onStart();
-
-        mvelocidadRef.addValueEventListener(new ValueEventListener() {
+        eventListener = new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                String text = dataSnapshot.getValue(String.class);
-                mvelocidad.setText(text);
+                Prediccion pred = dataSnapshot.getValue(Prediccion.class);
+                assert pred != null;
+                velocidad.setText(pred.getVelocidad() + "cm/s");
+                aceleracion.setText(pred.getAceleracion() + "cm/s");
+                bateria.setText(pred.getBateria() + "%");
+                distancia.setText(pred.getDistancia() + "cm");
             }
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
 
             }
-        });
+        };
+        dbPrediccion.addValueEventListener(eventListener);
     }
 }
